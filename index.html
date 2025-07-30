@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shosan Couture - Luxury Fashion House</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -62,7 +63,15 @@
 
             <div class="feature-grid">
                 <div class="product-card" onclick="showPage('products')">
-                    <div class="product-image">Explore Collections</div>
+                    <div class="image-overlay-container">
+                        <img 
+                            src="/public/img/groceries.svg" 
+                            alt="Product Card Image" 
+                            class="background-image"
+                        >
+                        <div class="overlay"></div>
+                        <div class="overlay-text">Explore Collections</div>
+                    </div>
                     <div class="product-info">
                         <h3>Luxury Collections</h3>
                         <p>Discover our curated selection of haute couture pieces</p>
@@ -70,7 +79,15 @@
                 </div>
 
                 <div class="product-card" onclick="showPage('board')">
-                    <div class="product-image">Meet Our Team</div>
+                    <div class="image-overlay-container">
+                        <img 
+                            src="/public/img/team-spirit.svg" 
+                            alt="Product Card Image" 
+                            class="background-image"
+                        >
+                        <div class="overlay"></div>
+                        <div class="overlay-text">Meet Our Team</div>
+                    </div>
                     <div class="product-info">
                         <h3>Board of Trustees</h3>
                         <p>The visionaries behind Shosan Couture</p>
@@ -78,7 +95,15 @@
                 </div>
 
                 <div class="product-card" onclick="showPage('inquiries')">
-                    <div class="product-image">Get in Touch</div>
+                    <div class="image-overlay-container">
+                        <img 
+                            src="/public/img/schedule-meeting.svg" 
+                            alt="Product Card Image" 
+                            class="background-image"
+                        >
+                        <div class="overlay"></div>
+                        <div class="overlay-text">Get In Touch</div>
+                    </div>
                     <div class="product-info">
                         <h3>Personal Consultation</h3>
                         <p>Book your exclusive styling appointment</p>
@@ -96,58 +121,95 @@
 
             <div class="product-grid">
                 <div class="product-card">
-                    <div class="product-image">Evening Gowns</div>
+                    <div class="product-image">
+                        <img 
+                            src="/public/img/CSC-2_0006_Gemini_Generated_Image_nzg8rqnzg8rqnzg8.jpg" 
+                            alt="Midnight Elegance Gown"
+                            class="image"
+                        >
+                    </div>
                     <div class="product-info">
                         <h3>Midnight Elegance Gown</h3>
                         <p>Stunning floor-length gown with intricate beadwork</p>
                         <div class="product-price">$2,499</div>
                     </div>
                 </div>
-
+                
                 <div class="product-card">
-                    <div class="product-image">Luxury Suits</div>
+                    <div class="product-image">
+                        <img 
+                            src="/public/img/CSC-2_0005_Gemini_Generated_Image_nzg8rpnzg8rpnzg8.jpg" 
+                            alt="Crimson Rose Dress"
+                            class="image"
+                        >
+                    </div>
                     <div class="product-info">
-                        <h3>Executive Power Suit</h3>
-                        <p>Tailored to perfection with Italian wool</p>
+                        <h3>Crimson Rose Dress</h3>
+                        <p>Elegant red satin gown with a sweetheart neckline</p>
                         <div class="product-price">$1,899</div>
                     </div>
                 </div>
-
+                
                 <div class="product-card">
-                    <div class="product-image">Cocktail Dresses</div>
+                    <div class="product-image">
+                        <img 
+                            src="/public/img/CSC-2_0007_Gemini_Generated_Image_nzg8rrnzg8rrnzg8.jpg" 
+                            alt="Royal Sapphire Gown"
+                            class="image"
+                        >
+                    </div>
                     <div class="product-info">
-                        <h3>Aurora Cocktail Dress</h3>
-                        <p>Sophisticated midi dress with silk finish</p>
-                        <div class="product-price">$1,299</div>
+                        <h3>Royal Sapphire Gown</h3>
+                        <p>Deep blue silk dress with open back and train</p>
+                        <div class="product-price">$2,150</div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img 
+                            src="/public/img/CSC-2_0004_Gemini_Generated_Image_nzg8rmnzg8rmnzg8.jpg" 
+                            alt="Golden Grace Ensemble"
+                            class="image"
+                        >
+                    </div>
+                    <div class="product-info">
+                        <h3>Golden Grace Ensemble</h3>
+                        <p>Shimmering gold gown with feathered accents</p>
+                        <div class="product-price">$2,799</div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img 
+                            src="/public/img/CSC-2_0003_Gemini_Generated_Image_nzg8rtnzg8rtnzg8.jpg" 
+                            alt="Emerald Whisper Dress"
+                            class="image"
+                        >
+                    </div>
+                    <div class="product-info">
+                        <h3>Emerald Whisper Dress</h3>
+                        <p>Soft chiffon dress with high slit and halter top</p>
+                        <div class="product-price">$1,749</div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img 
+                            src="/public/img/CSC-2_0002_Gemini_Generated_Image_nzg8rnnzg8rnnzg8.jpg" 
+                            alt="Velvet Twilight Gown"
+                            class="image"
+                        >
+                    </div>
+                    <div class="product-info">
+                        <h3>Velvet Twilight Gown</h3>
+                        <p>Dark purple velvet dress with sheer sleeves</p>
+                        <div class="product-price">$2,299</div>
                     </div>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-image">Accessories</div>
-                    <div class="product-info">
-                        <h3>Diamond Statement Necklace</h3>
-                        <p>18k gold with premium diamonds</p>
-                        <div class="product-price">$3,999</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">Casual Wear</div>
-                    <div class="product-info">
-                        <h3>Designer Casual Set</h3>
-                        <p>Luxury comfort wear for everyday elegance</p>
-                        <div class="product-price">$599</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">Footwear</div>
-                    <div class="product-info">
-                        <h3>Signature Heels</h3>
-                        <p>Handcrafted Italian leather with gold accents</p>
-                        <div class="product-price">$899</div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -163,8 +225,10 @@
 
             <div class="board-grid">
                 <div class="board-member">
-                    <div class="member-photo">SC</div>
-                    <h3>Sophia Chen</h3>
+                    <div class="member-photo">
+                        <img src="/public/img/CSC-1 (Blessing).jpg" alt="Team Image">
+                    </div>
+                    <h3>Blessing Anyebe</h3>
                     <p><strong>Chairwoman & Creative Director</strong></p>
                     <p>
                         Former Vogue editor with 15 years of luxury fashion experience
@@ -172,22 +236,28 @@
                 </div>
 
                 <div class="board-member">
-                    <div class="member-photo">MA</div>
-                    <h3>Marcus Anderson</h3>
+                    <div class="member-photo">
+                        <img src="/public/img/CSC-1 (Kenny).jpg" alt="Team Image">
+                    </div>
+                    <h3>Kenny Ogbogu</h3>
                     <p><strong>Chief Executive Officer</strong></p>
                     <p>Business strategist specializing in luxury brand development</p>
                 </div>
 
                 <div class="board-member">
-                    <div class="member-photo">IR</div>
-                    <h3>Isabella Rodriguez</h3>
+                    <div class="member-photo">
+                        <img src="/public/img/CSC-1 (Ahwe).jpg" alt="Team Image">
+                    </div>
+                    <h3>Ahwe Divine</h3>
                     <p><strong>Head of Design</strong></p>
                     <p>Award-winning designer with expertise in haute couture</p>
                 </div>
 
                 <div class="board-member">
-                    <div class="member-photo">JW</div>
-                    <h3>James Wellington</h3>
+                    <div class="member-photo">
+                        <img src="/public/img/CSC-1 (Showkeyz).jpg" alt="Team Image">
+                    </div>
+                    <h3>Showkeyz</h3>
                     <p><strong>Chief Financial Officer</strong></p>
                     <p>Financial expert with deep knowledge of luxury markets</p>
                 </div>
@@ -418,6 +488,104 @@
 
         </div>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">Shosan Couture</div>
+                <p class="footer-tagline">Where Elegance Meets Innovation</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Collections</h4>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="showPage('products')">Evening Gowns</a></li>
+                    <li><a href="#" onclick="showPage('products')">Executive Suits</a></li>
+                    <li><a href="#" onclick="showPage('products')">Cocktail Dresses</a></li>
+                    <li><a href="#" onclick="showPage('products')">Luxury Accessories</a></li>
+                    <li><a href="#" onclick="showPage('products')">Casual Wear</a></li>
+                    <li><a href="#" onclick="showPage('products')">Designer Footwear</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="showPage('inquiries')">Personal Styling</a></li>
+                    <li><a href="#" onclick="showPage('inquiries')">Custom Design</a></li>
+                    <li><a href="#" onclick="showPage('inquiries')">Wardrobe Audit</a></li>
+                    <li><a href="#" onclick="showPage('inquiries')">Event Styling</a></li>
+                    <li><a href="#" onclick="showPage('inquiries')">Bridal Consultation</a></li>
+                    <li><a href="#" onclick="showPage('inquiries')">Corporate Packages</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="showPage('board')">About Us</a></li>
+                    <li><a href="#" onclick="showPage('board')">Our Team</a></li>
+                    <li><a href="#" onclick="showPage('events')">Events</a></li>
+                    <li><a href="#" onclick="showPage('inquiries')">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+
+            <!-- <div class="footer-section">
+                <h4>Contact Info</h4>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <p>Flagship Store</p>
+                        <p>1234 Madison Avenue<br>New York, NY 10128</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <p>Phone</p>
+                        <p>+1 (555) SHOSAN-1</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <p>Email</p>
+                        <p>hello@shosancouture.com</p>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="copyright">
+                    <p>&copy; 2025 Shosan Couture. All rights reserved.</p>
+                </div>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Shipping & Returns</a>
+                    <a href="#">Size Guide</a>
+                </div>
+                <!-- <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-apple-pay"></i>
+                </div> -->
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

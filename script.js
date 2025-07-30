@@ -150,11 +150,11 @@ function createSearchBar() {
     `;
 
     // Add search bar to each page
-    document.querySelectorAll(".hero").forEach((hero) => {
-        if (!hero.querySelector("#searchInput")) {
-            hero.insertAdjacentHTML("beforeend", searchHTML);
-        }
-    });
+    // document.querySelectorAll(".hero").forEach((hero) => {
+    //     if (!hero.querySelector("#searchInput")) {
+    //         hero.insertAdjacentHTML("beforeend", searchHTML);
+    //     }
+    // });
 }
 
 function performSearch() {

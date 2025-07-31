@@ -36,6 +36,55 @@
                     </li>
                 </ul>
             </nav>
+
+
+            <div class="dropdown-menu">
+                <a href="#" class="" onclick="toggleDropdownMobile(event)">
+                    <i id="chevron" class="fas fa-bars"></i>
+                </a>
+
+                <!-- Backdrop overlay -->
+                <div id="dropdownBackdrop" class="" onclick="closeDropdownMobile()"></div>
+
+                <!-- Dropdown Menu -->
+                <ul id="dropdownMobile" class="translate-x-full">
+                    <!-- Close button -->
+                    <li>
+                        <div class="dropdownMobileHeader">
+                            <h3>Shosan Couture</h3>
+                            <div id="close-button" href="#" onclick="closeDropdownMobile()">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- Menu items -->
+                    <li class="menu-item active" onclick="showPage('home')">
+                        <i class="fas fa-home"></i>
+                        <div>Home</div>
+                    </li>
+                    <li class="menu-item" onclick="showPage('products')">
+                        <i class="fas fa-home"></i>
+                        <div>Products</div>
+                    </li>
+                    <li class="menu-item" onclick="showPage('board')">
+                        <i class="fas fa-home"></i>
+                        <div>Board Of Trustees</div>
+                    </li>
+                    <li class="menu-item" onclick="showPage('inquiries')">
+                        <i class="fas fa-home"></i>
+                        <div>Inquiries</div>
+                    </li>
+                    <li class="menu-item" onclick="showPage('events')">
+                        <i class="fas fa-home"></i>
+                        <div>Events</div>
+                    </li>
+                    <li class="menu-item" onclick="showPage('doms')">
+                        <i class="fas fa-home"></i>
+                        <div>Dom Structure</div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -109,6 +158,7 @@
                         <p>Book your exclusive styling appointment</p>
                     </div>
                 </div>
+            
             </div>
         </div>
 

@@ -13,7 +13,9 @@ function showPage(pageId) {
 
     // Update navigation
     const navLinks = document.querySelectorAll(".nav-link");
+    const mobileNavLinks = document.querySelectorAll(".menu-item");
     navLinks.forEach((link) => link.classList.remove("active"));
+    mobileNavLinks.forEach((link) => link.classList.remove("active"));
     event.target.classList.add("active");
 
     // Smooth scroll to top
@@ -344,7 +346,7 @@ document.addEventListener("DOMContentLoaded", function () {
     createSearchBar();
 
     // Add theme toggle
-    addThemeToggle();
+    // addThemeToggle();
 
     // Add lazy loading
     setTimeout(addLazyLoading, 500);
@@ -423,4 +425,126 @@ function monitorPerformance() {
 }
 
 monitorPerformance();
+
+
+
+
+
+
+
+
+
+
+
+
+let isDropdownOpen = false;
+
+// function toggleDropdown(event) {
+//     // event.preventDefault();
+//     const dropdown = document.getElementById('dropdown');
+//     const chevron = document.getElementById('chevron');
+
+//     if (isDropdownOpen) {
+//         // Close dropdown
+//         dropdown.classList.remove('open');
+//         dropdown.style.opacity = '0';
+//         chevron.style.transform = 'rotate(0deg)';
+//         isDropdownOpen = false;
+//     } else {
+//         // Open dropdown
+//         dropdown.classList.add('open');
+//         dropdown.style.opacity = '1';
+//         chevron.style.transform = 'rotate(180deg)';
+//         isDropdownOpen = true;
+//     }
+// }
+
+// document.addEventListener('click', function(event) {
+//     const dropdown = document.getElementById('dropdown');
+//     const productsLink = event.target.closest('[onclick="toggleDropdown(event)"]');
+    
+//     if (!productsLink && !dropdown.contains(event.target) && isDropdownOpen) {
+//         dropdown.classList.remove('open');
+//         dropdown.style.opacity = '0';
+//         document.getElementById('chevron').style.transform = 'rotate(0deg)';
+//         isDropdownOpen = false;
+//     }
+// });
+
+function openDropdownMobile() {
+    const dropdown = document.getElementById('dropdownMobile');
+    const backdrop = document.getElementById('dropdownBackdrop');
+    const chevron = document.getElementById('chevron');
+    
+    // Show backdrop
+    backdrop.classList.remove('invisible', 'opacity-0');
+    backdrop.classList.add('opacity-100');
+    
+    // Slide in dropdown
+    dropdown.classList.remove('translate-x-full');
+    dropdown.classList.add('translate-x-0');
+    
+    // Rotate icon to X
+    chevron.classList.remove('fa-bars');
+    chevron.classList.add('fa-times');
+    chevron.classList.add('rotate-180');
+    
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden';
+    console.log("Opening Menu Function Fired....");
+}
+
+function closeDropdownMobile() {
+    const dropdown = document.getElementById('dropdownMobile');
+    const backdrop = document.getElementById('dropdownBackdrop');
+    const chevron = document.getElementById('chevron');
+    
+    // Hide backdrop
+    backdrop.classList.remove('opacity-100');
+    backdrop.classList.add('opacity-0', 'invisible');
+    
+    // Slide out dropdown
+    dropdown.classList.remove('translate-x-0');
+    dropdown.classList.add('translate-x-full');
+    
+    // Rotate icon back to bars
+    chevron.classList.remove('fa-times', 'rotate-180');
+    chevron.classList.add('fa-bars');
+    
+    // Restore body scroll
+    document.body.style.overflow = '';
+}
+
+// Close dropdown when clicking on menu items
+document.querySelectorAll('#dropdownMobile .menu-item').forEach(link => {
+    link.addEventListener('click', () => {
+        setTimeout(closeDropdownMobile, 1000);
+    });
+});
+
+// Close dropdown on escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeDropdownMobile();
+    }
+});
+
+
+
+function toggleDropdownMobile(event) {
+    // event.preventDefault();
+    const dropdown = document.getElementById('dropdownMobile');
+    const backdrop = document.getElementById('dropdownBackdrop');
+    const chevron = document.getElementById('chevron');
+    
+    if (dropdown.classList.contains('translate-x-full')) {
+        openDropdownMobile();
+    } else {
+        closeDropdownMobile();
+    }
+    console.log("Mobile Toggle Pressed...");
+}
+
+
+
 

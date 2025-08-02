@@ -4,6 +4,11 @@
 
 // 1. Page Navigation System
 function showPage(pageId) {
+    if (pageId === "doms") {
+        console.log("No ID passed!");
+        return;
+    }
+
     // Hide all pages
     const pages = document.querySelectorAll(".page");
     pages.forEach((page) => page.classList.remove("active"));
@@ -20,6 +25,7 @@ function showPage(pageId) {
 
     // Smooth scroll to top
     window.scrollTo({ top: 0, behavior: "smooth" });
+    console.log("Page ID:>>>>>>", pageId);
 }
 
 // 2. Form Handling with Validation

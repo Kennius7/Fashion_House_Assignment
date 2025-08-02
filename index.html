@@ -13,7 +13,7 @@
     <!-- Header with Navigation -->
     <header>
         <div class="header-content">
-            <div class="logo">Shosan Couture</div>
+            <div class="logo" onclick="showPage('home')">Shosan Couture</div>
             <nav>
                 <ul>
                     <li>
@@ -64,23 +64,23 @@
                         <div>Home</div>
                     </li>
                     <li class="menu-item" onclick="showPage('products')">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fab fa-product-hunt"></i>
                         <div>Products</div>
                     </li>
                     <li class="menu-item" onclick="showPage('board')">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fas fa-users"></i>
                         <div>Board Of Trustees</div>
                     </li>
                     <li class="menu-item" onclick="showPage('inquiries')">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fas fa-phone-alt"></i>
                         <div>Inquiries</div>
                     </li>
                     <li class="menu-item" onclick="showPage('events')">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fas fa-clipboard-check"></i>
                         <div>Events</div>
                     </li>
                     <li class="menu-item" onclick="showPage('doms')">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fas fa-tree"></i>
                         <div>Dom Structure</div>
                     </li>
                 </ul>
@@ -278,10 +278,10 @@
                     <div class="member-photo">
                         <img src="/public/img/CSC-1 (Blessing).jpg" alt="Team Image">
                     </div>
-                    <h3>Blessing Anyebe</h3>
+                    <h2>Blessing Anyebe</h2>
                     <p><strong>Chairwoman & Creative Director</strong></p>
                     <p>
-                        Former Vogue editor with 15 years of luxury fashion experience
+                        <i>Former Vogue editor with 15 years of luxury fashion experience</i>
                     </p>
                 </div>
 
@@ -289,34 +289,44 @@
                     <div class="member-photo">
                         <img src="/public/img/CSC-1 (Kenny).jpg" alt="Team Image">
                     </div>
-                    <h3>Kenny Ogbogu</h3>
+                    <h2>Kenny Ogbogu</h2>
                     <p><strong>Chief Executive Officer</strong></p>
-                    <p>Business strategist specializing in luxury brand development</p>
+                    <p>
+                        <i>Business strategist specializing in luxury brand development</i>
+                    </p>
                 </div>
 
                 <div class="board-member">
                     <div class="member-photo">
                         <img src="/public/img/CSC-1 (Ahwe).jpg" alt="Team Image">
                     </div>
-                    <h3>Ahwe Divine</h3>
+                    <h2>Ahwe Divine</h2>
                     <p><strong>Head of Design</strong></p>
-                    <p>Award-winning designer with expertise in haute couture</p>
+                    <p>
+                        <i>Award-winning designer with expertise in haute couture</i>
+                    </p>
                 </div>
 
                 <div class="board-member">
                     <div class="member-photo">
                         <img src="/public/img/CSC-1 (Showkeyz).jpg" alt="Team Image">
                     </div>
-                    <h3>Showkeyz</h3>
+                    <h2>Adeshola Adefowoju</h2>
                     <p><strong>Chief Financial Officer</strong></p>
-                    <p>Financial expert with deep knowledge of luxury markets</p>
+                    <p>
+                        <i>Financial expert with deep knowledge of luxury markets</i>
+                    </p>
                 </div>
 
                 <div class="board-member">
-                    <div class="member-photo">EM</div>
-                    <h3>Elena Moreau</h3>
+                    <div class="member-photo">
+                        <img src="/public/img/CSC-1 (Oluwaseun).jpg" alt="Team Image">
+                    </div>
+                    <h2>Oluwaseun Ezekiel</h2>
                     <p><strong>Director of Operations</strong></p>
-                    <p>Operations specialist ensuring quality at every level</p>
+                    <p>
+                        <i>Operations specialist ensuring quality at every level</i>
+                    </p>
                 </div>
             </div>
         </div>
@@ -353,12 +363,8 @@
                         <label for="service">Service Type</label>
                         <select id="service" name="service" required>
                             <option value="">Select a service</option>
-                            <option value="personal-styling">
-                                Personal Styling Session
-                            </option>
-                            <option value="custom-design">
-                                Custom Design Consultation
-                            </option>
+                            <option value="personal-styling">Personal Styling Session</option>
+                            <option value="custom-design">Custom Design Consultation</option>
                             <option value="wardrobe-audit">Wardrobe Audit</option>
                             <option value="event-styling">Special Event Styling</option>
                             <option value="bridal">Bridal Consultation</option>
@@ -372,8 +378,13 @@
 
                     <div class="form-group">
                         <label for="message">Additional Details</label>
-                        <textarea id="message" name="message" rows="4"
-                            placeholder="Tell us about your styling needs..."></textarea>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="4" 
+                            placeholder="Tell us about your styling needs..."
+                        >
+                        </textarea>
                     </div>
 
                     <button type="submit" class="btn">Book Appointment</button>
@@ -390,52 +401,83 @@
                 </p>
             </div>
 
-            <div class="event-card">
-                <div class="event-date">August 15, 2025</div>
-                <h3>Paris Fashion Week 2025</h3>
-                <p>
-                    Shosan Couture presents its Fall/Winter 2025 collection at the
-                    Grand Palais. Witness the unveiling of our most ambitious collection
-                    yet, inspired by modern architecture and classical elegance.
-                </p>
-                <p><strong>Location:</strong> Grand Palais, Paris</p>
-                <p><strong>Time:</strong> 7:00 PM - 10:00 PM</p>
+            <div class="events-container">
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="/public/img/event (4).png" alt="Paris Fashion Week runway show" loading="lazy">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">August 15, 2025</div>
+                        <h3>Paris Fashion Week 2025</h3>
+                        <p>
+                            Shosan Couture presents its Fall/Winter 2025 collection at the
+                            Grand Palais. Witness the unveiling of our most ambitious collection
+                            yet, inspired by modern architecture and classical elegance.
+                        </p>
+                        <div class="event-details">
+                            <p><strong>Location:</strong> Grand Palais, Paris</p>
+                            <p><strong>Time:</strong> 7:00 PM - 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="/public/img/event (3).png" alt="Exclusive fashion boutique interior" loading="lazy">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">September 3, 2025</div>
+                        <h3>Exclusive Trunk Show</h3>
+                        <p>
+                            Private viewing of our limited edition pieces with personal styling
+                            consultations. Meet our design team and discover pieces before they
+                            hit the showroom.
+                        </p>
+                        <div class="event-details">
+                            <p><strong>Location:</strong> Shosan Couture Flagship Store</p>
+                            <p><strong>Time:</strong> 2:00 PM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="/public/img/event (2).png" alt="Sustainable fashion conference" loading="lazy">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">September 20, 2025</div>
+                        <h3>Sustainable Fashion Symposium</h3>
+                        <p>
+                            Join industry leaders as we discuss the future of sustainable luxury
+                            fashion. Learn about our eco-friendly initiatives and commitment to
+                            responsible fashion.
+                        </p>
+                        <div class="event-details">
+                            <p><strong>Location:</strong> Milan Design Center</p>
+                            <p><strong>Time:</strong> 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="/public/img/event (1).png" alt="Holiday fashion collection display" loading="lazy">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">October 12, 2025</div>
+                        <h3>Holiday Collection Preview</h3>
+                        <p>
+                            Be the first to see our holiday collection featuring festive pieces
+                            perfect for the season's most important celebrations.
+                        </p>
+                        <div class="event-details">
+                            <p><strong>Location:</strong> New York Showroom</p>
+                            <p><strong>Time:</strong> 6:00 PM - 9:00 PM</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="event-card">
-                <div class="event-date">September 3, 2025</div>
-                <h3>Exclusive Trunk Show</h3>
-                <p>
-                    Private viewing of our limited edition pieces with personal styling
-                    consultations. Meet our design team and discover pieces before they
-                    hit the showroom.
-                </p>
-                <p><strong>Location:</strong> Shosan Couture Flagship Store</p>
-                <p><strong>Time:</strong> 2:00 PM - 6:00 PM</p>
-            </div>
-
-            <div class="event-card">
-                <div class="event-date">September 20, 2025</div>
-                <h3>Sustainable Fashion Symposium</h3>
-                <p>
-                    Join industry leaders as we discuss the future of sustainable luxury
-                    fashion. Learn about our eco-friendly initiatives and commitment to
-                    responsible fashion.
-                </p>
-                <p><strong>Location:</strong> Milan Design Center</p>
-                <p><strong>Time:</strong> 10:00 AM - 4:00 PM</p>
-            </div>
-
-            <div class="event-card">
-                <div class="event-date">October 12, 2025</div>
-                <h3>Holiday Collection Preview</h3>
-                <p>
-                    Be the first to see our holiday collection featuring festive pieces
-                    perfect for the season's most important celebrations.
-                </p>
-                <p><strong>Location:</strong> New York Showroom</p>
-                <p><strong>Time:</strong> 6:00 PM - 9:00 PM</p>
-            </div>
         </div>
 
         <!-- DOM Structure Page -->

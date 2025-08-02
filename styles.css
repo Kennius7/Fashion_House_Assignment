@@ -1,14 +1,5 @@
 
 
-
-
-
-/* .color {
-    color: #d49f2c;
-    background-color: #944c09;
-} */
-
-
  /* External CSS embedded for demonstration */
  * {
     margin: 0;
@@ -51,6 +42,7 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    cursor: pointer;
 }
 
 nav ul {
@@ -302,9 +294,13 @@ main {
 .form-container {
     background: white;
     border-radius: 15px;
-    padding: 2rem;
+    padding: 3rem;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     margin-top: 2rem;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
 }
 
 .form-group {
@@ -314,7 +310,10 @@ main {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
+    margin-left: 4px;
     font-weight: bold;
+    font-family: Cambria, serif;
+    font-size: 17px;
     color: #2c3e50;
 }
 
@@ -327,6 +326,11 @@ main {
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
+}
+
+.form-group select option {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
 }
 
 .form-group input:focus,
@@ -354,20 +358,92 @@ main {
 }
 
 /* Events Styles */
+
+.events-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .event-card {
     background: white;
-    border-radius: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    min-height: 280px;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.event-image {
+    flex: 0 0 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.05);
+}
+
+.event-content {
+    flex: 1;
     padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #d49f2c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .event-date {
-    color: #d49f2c;
-    font-weight: bold;
-    font-size: 1.1rem;
+    background: linear-gradient(45deg, #d49f2c, #944c09);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+    width: fit-content;
 }
+
+.event-content h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.event-content p {
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.event-details {
+    margin-top: auto;
+}
+
+.event-details p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.event-details strong {
+    color: #2c3e50;
+}
+
 
 /* DOM Structure Styles */
 .dom-tree {
@@ -444,9 +520,8 @@ main {
 .social-links {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    /* gap: 1rem;
-    margin-top: 2rem; */
+    justify-content: flex-start;
+    gap: 5rem;
 }
 
 .social-link {
@@ -749,6 +824,7 @@ main {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        cursor: pointer;
     }
 
     nav {
@@ -838,14 +914,19 @@ main {
         color: #d49f2c
     }
 
-    .menu-item div {
-        margin-left: 10px;
+    .menu-item.active i {
+        color: white
     }
 
     .menu-item.active {
         background: linear-gradient(45deg, #d49f2c, #944c09);
         color: white;
     }
+
+    .menu-item div {
+        margin-left: 10px;
+    }
+
 
     .translate-x-full {
         transform: translateX(100%);
@@ -883,7 +964,7 @@ main {
     /* Main Content Styles */
     main {
         margin: 0 auto;
-        padding: 50px 20px;
+        padding: 50px 10px;
         width: 100%;
     }
     
@@ -918,7 +999,7 @@ main {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         margin-bottom: 2rem;
         width: 100%;
-        height: 350px;
+        height: fit-content;
     }
 
     .hero h1 {
@@ -951,10 +1032,16 @@ main {
 
     /* Product Grid */
     .product-grid {
-        display: grid;
+        /* display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
-        margin-top: 2rem;
+        margin-top: 2rem; */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     .product-card {
@@ -964,12 +1051,12 @@ main {
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         transition: all 0.3s ease;
         cursor: pointer;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        width: 320px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        width: 100%;
     }
 
-    .product-card:hover {
+    .product-card:focus {
         transform: translateY(-10px);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
     }
@@ -1046,10 +1133,16 @@ main {
 
     /* Board Members Grid */
     .board-grid {
-        display: grid;
+        /* display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 2rem;
-        margin-top: 2rem;
+        margin-top: 2rem; */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     .board-member {
@@ -1066,10 +1159,14 @@ main {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
 
+    .board-member p strong {
+        font-family: Cambria;
+        font-size: 17px;
+    }
 
     .member-photo {
-        width: 160px;
-        height: 160px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         background: linear-gradient(45deg, #d49f2c, #944c09);
         margin: 0 auto 1rem;
@@ -1118,6 +1215,16 @@ main {
         transition: border-color 0.3s ease;
     }
 
+    .form-group select::placeholder {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-style: italic;
+    }
+
+    .form-group select option {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-style: italic;
+    }
+
     .form-group input:focus,
     .form-group textarea:focus,
     .form-group select:focus {
@@ -1143,20 +1250,48 @@ main {
     }
 
     /* Events Styles */
+
+    .events-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
     .event-card {
-        background: white;
-        border-radius: 15px;
-        padding: 2rem;
-        margin-bottom: 2rem;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        border-left: 5px solid #d49f2c;
+        margin: 0 0.5rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .event-image {
+        height: 180px;
+    }
+
+    .event-content {
+        padding: 1rem;
+    }
+
+    .event-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .event-content p {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
     }
 
     .event-date {
-        color: #d49f2c;
-        font-weight: bold;
-        font-size: 1.1rem;
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+        margin-bottom: 0.8rem;
     }
+
+    .event-details p {
+        font-size: 0.85rem;
+    }
+
 
     /* DOM Structure Styles */
     .dom-tree {
